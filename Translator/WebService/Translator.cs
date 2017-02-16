@@ -16,7 +16,6 @@ namespace TranslatorBot
     public class Translator
     {
         // Get Client Id and Client Secret from https://datamarket.azure.com/developer/applications/
-        // Obtain AccessToken using method at http://msdn.microsoft.com/en-us/library/hh454950.aspx 
         const string clientID     = "ClientID";
         const string clientSecret = "ClientSecret";
 
@@ -111,6 +110,7 @@ namespace TranslatorBot
         private Timer accessTokenRenewer;
         private const int RefreshTokenDuration = 9;
 
+        // Obtain AccessToken using method at http://msdn.microsoft.com/en-us/library/hh454950.aspx 
         public DatamarketAuthenticator(string clientId, string clientSecret)
         {
             this.clientId = clientId;
